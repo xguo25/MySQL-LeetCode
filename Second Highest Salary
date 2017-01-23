@@ -1,0 +1,12 @@
+SELECT MAX(Salary) AS SecondHighestSalary
+FROM Employee
+WHERE Salary < (SELECT MAX(Salary)
+                FROM Employee)
+
+/*
+#A simple way to solve this problem
+Select Salary AS SecondHighestSalary
+FROM Employee
+LIMIT 1 OFFSET 1
+ORDER BY Salary;
+*/
