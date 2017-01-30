@@ -1,0 +1,11 @@
+#Self join method
+
+SELECT E1.Name AS Employee
+FROM Employee AS E1, Employee AS E2 
+WHERE E1.ManagerId = E2.Id #Step 1 will produce the following results
+AND E1.Salary > E2.Salary #Step 2 will find the rows in Step 1 where E1.Salary > E2.Salary
+
+#Step 1 results
+#| Id | Name  | Salary | ManagerId | vs. | Id | Name  | Salary | ManagerId |
+#| 1  | Joe   | 70000  | 3         | vs. | 3  | Sam   | 60000  | NULL      |
+#| 2  | Henry | 80000  | 4         | vs. | 4  | Max   | 90000  | NULL      |
