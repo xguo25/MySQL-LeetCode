@@ -1,2 +1,3 @@
 # MySQL-LeetCode
-Practice of sql database problems
+Leetcode database questions
+Difficulty level: Easy & Medium
