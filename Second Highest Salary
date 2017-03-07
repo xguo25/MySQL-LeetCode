@@ -21,5 +21,5 @@ WHERE Salary < (SELECT MAX(Salary)
 Select Salary AS SecondHighestSalary
 FROM Employee
 LIMIT 1 OFFSET 1
-ORDER BY Salary;
+ORDER BY Salary DESC;
 */
